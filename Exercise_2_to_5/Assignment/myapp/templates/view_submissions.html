@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submitted Data</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>View Submissions</h1>
+    <nav>
+        <a href="{% url 'index' %}">MAIN PAGE</a>
+    </nav>
+</header>
+
+<div class="main-content">
+    <h2>Submitted Data</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Submitted At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for submission in submissions %}
+                <tr>
+                    <td>{{ submission.name }}</td>
+                    <td>{{ submission.email }}</td>
+                    <td>{{ submission.submitted_at }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No submissions yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <a href="{% url 'contact' %}">Contact</a>
+    <p>Contact us at: email@example.com</p>
+</footer>
+</body>
+</html>

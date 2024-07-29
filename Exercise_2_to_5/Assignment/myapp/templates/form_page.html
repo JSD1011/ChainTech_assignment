@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Submit Your Details</h1>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'view_submissions' %}">View Submissions</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Submit Your Details</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="{% url 'contact' %}">Contact</a>
+        <p>Contact us at: email@example.com</p>
+    </footer>
+
+</body>
+
+</html>

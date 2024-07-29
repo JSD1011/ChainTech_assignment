@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>services</title>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+</head>
+<body>
+<header>
+    <h1>I provide below Services </h1>
+    <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'form_page' %}">Form</a>
+    </nav>
+</header>
+
+<div class="main-content">
+        <h2>My Services:-</h2>
+        <ul>
+           <li>learn Python with me</li>
+            <li>framework</li>
+            <li>Django</li>
+        </ul>
+    </div>
+
+    <footer>
+        <a href="{% url 'contact' %}">Contact</a>
+        <p>Contact us at: email@example.com</p>
+    </footer>
+</body>
+</html>

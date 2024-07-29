@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Web Page</h1>
+        <nav>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'form_page' %}">Form</a>
+            <a href="{% url 'view_submissions' %}">View Submissions</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Welcome to My Website</h2>
+        <h3>Some dynamic content Added...</h3>
+        <h5>Current time: In India {{ current_time }}</h5>
+        <h5>Random quote: "{{ random_quote }}"</h5>
+
+
+        <h4>Submit Your Details</h4>
+        <button type="button" onclick="window.location.href='{% url 'form_page' %}'">Form</button>
+
+
+    </div>
+
+    <footer>
+        <a href="{% url 'contact' %}">Contact</a>
+        <p>Contact us at: email@example.com</p>
+    </footer>
+
+</body>
+
+</html>

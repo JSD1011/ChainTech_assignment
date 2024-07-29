@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ThankYou page</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+</head>
+<body>
+<header>
+    <h1>Thank you *_*</h1>
+    <nav>
+        <a href="{% url 'index' %}">MAIN PAGE</a>
+        <a href="{% url 'view_submissions' %}">View Submissions</a>
+    </nav>
+</header>
+
+<div class="main-content">
+        <h2>Your Data is Successfully Submitted...</h2>
+    </div>
+
+    <footer>
+        <a href="{% url 'contact' %}">Contact</a>
+        <p>Contact us at: email@example.com</p>
+    </footer>
+</body>
+</body>
+</html>

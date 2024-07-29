@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ext.css' %}">
+</head>
+<body>
+<header>
+    <h1>About My self</h1>
+    <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'form_page' %}">Form</a>
+
+    </nav>
+</header>
+
+<div class="main-content">
+        <h2>My General Info</h2>
+    <p>My favourite Games :</p>
+        <ul>
+           <li>Cricket</li>
+            <li>Football</li>
+            <li>Tennis</li>
+        </ul>
+    </div>
+
+    <footer>
+        <a href="{% url 'contact' %}">Contact</a>
+        <p>Contact us at: email@example.com</p>
+    </footer>
+</body>
+</html>
